@@ -8,9 +8,7 @@
         "scripts" : ["backgroundScript.js"]
       },
     "browser_action": {
-      "default_icon": "logo.png"
-      },
-    "icons": "logo.png"
+      }
 }
   
   
