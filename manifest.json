@@ -1,0 +1,16 @@
+{
+    "name": "Ebay Address Filler",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Use this extension to fill in ebay address with just a copy and paste",
+    "permissions": ["activeTab"],
+    "background" : {
+        "scripts" : ["backgroundScript.js"]
+      },
+    "browser_action": {
+      "default_icon": "logo.png"
+      },
+    "icons": "logo.png"
+}
+  
+  
