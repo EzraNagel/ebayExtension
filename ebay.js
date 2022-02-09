@@ -7,22 +7,25 @@ function fillAddress(){
 
 
     if(lineNum == 3){
+        array1 = array[0].split(" ");
         array2 = array[2].split(" ");
-
-        document.getElementById('s0-0-16-6-name-field-name-field').value = array[0];
-        document.getElementById('s0-0-16-6-address-autocomplete-field-addressLine1-field-addressLine1-field').value = array[1];
-        document.getElementById('s0-0-16-6-city-field-city-field').value = array2[0];
-        document.getElementsByName('stateDD')[0].value = array2[1];
-        document.getElementById('s0-0-16-6-zipCode-field-zipCode-field').value = array2[2];
+        
+        document.getElementById('firstName').value = array1[0];
+        document.getElementById('lastName').value = array1[1];
+        document.getElementById('addressLine1').value = array[1];
+        document.getElementById('city').value = array2[0];
+        document.getElementById('stateOrProvince').value = array2[1];
+        document.getElementById('postalCode').value = array2[2];
     } else{
         array2 = array[3].split(" ");
     
-        document.getElementById('s0-0-16-6-name-field-name-field').value = array[0];
-        document.getElementById('s0-0-16-6-address-autocomplete-field-addressLine1-field-addressLine1-field').value = array[1];
-        document.getElementById('s0-0-16-6-addressLine2-field-addressLine2-field').value = array[2];
-        document.getElementById('s0-0-16-6-city-field-city-field').value = array2[0];
-        document.getElementsByName('stateDD')[0].value = array2[1];
-        document.getElementById('s0-0-16-6-zipCode-field-zipCode-field').value = array2[2];
+        document.getElementById('firstName').value = array1[0];
+        document.getElementById('firstName').value = array1[1];
+        document.getElementById('addressLine1').value = array[1];
+        document.getElementById('addressLine2').value = array[2];
+        document.getElementById('city').value = array2[0];
+        document.getElementById('stateOrProvince').value = array2[1];
+        document.getElementById('postalCode').value = array2[2];
     }
 }
 
