@@ -13,9 +13,9 @@ function fillAddress(){
         document.getElementById('firstName').value = array1[0];
         document.getElementById('lastName').value = array1[1];
         document.getElementById('addressLine1').value = array[1];
-        document.getElementById('city').value = array2[0];
-        document.getElementById('stateOrProvince').value = array2[1];
-        document.getElementById('postalCode').value = array2[2];
+        document.getElementById('addressLine2').value = "";
+        city(array2);
+
     } else{
         array2 = array[3].split(" ");
     
@@ -23,9 +23,20 @@ function fillAddress(){
         document.getElementById('firstName').value = array1[1];
         document.getElementById('addressLine1').value = array[1];
         document.getElementById('addressLine2').value = array[2];
-        document.getElementById('city').value = array2[0];
-        document.getElementById('stateOrProvince').value = array2[1];
-        document.getElementById('postalCode').value = array2[2];
+        city(array2);
+    }
+}
+
+function city(addressLine){
+    if(addressLine.length >= 4){
+        document.getElementById('city').value = addressLine[0] + " " + addressLine[1];
+        document.getElementsByName('stateOrProvince')[0].value = addressLine[2];
+        document.getElementById('postalCode').value = addressLine[3];
+    }
+    else{
+        document.getElementById('city').value = addressLine[0];
+        document.getElementById('stateOrProvince')[0].value = addressLine[1];
+        document.getElementById('postalCode').value = addressLine[2];
     }
 }
 
