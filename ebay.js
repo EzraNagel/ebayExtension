@@ -29,20 +29,15 @@ function fillAddress(){
     message();
 }
 
-function message(){
-    Id = document.querySelector("*[data-test-id='MESSAGE_TO_SELLER_TEXT_AREA']").getAttribute("id");
-    document.getElementById(Id).value = 'Thank you for this item! This is being sent to someone else so please do not include any invoices or ebay materials. Thanks!';
-}
-
 function city(addressLine){
     if(addressLine.length >= 4){
         document.getElementById('city').value = addressLine[0] + " " + addressLine[1];
-        document.getElementsByName('stateOrProvince')[0].value = addressLine[2];
+        document.getElementById('stateOrProvince').value = addressLine[2];
         document.getElementById('postalCode').value = addressLine[3];
     }
     else{
         document.getElementById('city').value = addressLine[0];
-        document.getElementById('stateOrProvince')[0].value = addressLine[1];
+        document.getElementById('stateOrProvince').value = addressLine[1];
         document.getElementById('postalCode').value = addressLine[2];
     }
 }
