@@ -15,6 +15,7 @@ function fillAddress(){
         document.getElementById('addressLine1').value = array[1];
         document.getElementById('addressLine2').value = "";
         city(array2);
+        document.getElementByDataTestId('')
 
     } else{
         array2 = array[3].split(" ");
@@ -25,6 +26,12 @@ function fillAddress(){
         document.getElementById('addressLine2').value = array[2];
         city(array2);
     }
+    message();
+}
+
+function message(){
+    Id = document.querySelector("*[data-test-id='MESSAGE_TO_SELLER_TEXT_AREA']").getAttribute("id");
+    document.getElementById(Id).value = 'Thank you for this item! This is being sent to someone else so please do not include any invoices or ebay materials. Thanks!';
 }
 
 function city(addressLine){
