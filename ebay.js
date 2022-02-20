@@ -79,10 +79,9 @@ fillAddress();
 function setMessage(){
     setTimeout(function(){
         document.querySelector('[data-test-id="MESSAGE_TO_SELLER_OPEN"]').click();
-    }, 2000);
-
-    alert("Thank you for this item! This is being sent to someone else, so please do not include any invoices or ebay materials. Thanks!");
-   
+        alert("Thank you for this item! This is being sent to someone else, so please do not include any invoices or ebay materials. Thanks!");
+    }, 6000);
+  
 }
 
 
