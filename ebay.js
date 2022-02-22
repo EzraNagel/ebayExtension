@@ -60,16 +60,28 @@ function name(nameLine){
     }
 
 }
+function selectCity(city){
+    if(city.length == 2){
+        document.getElementById('stateOrProvince').value = city;
+    }
+    else{
+        for(var i = 0; i < document.getElementById("stateOrProvince").length;i++){
+            if(document.getElementById("stateOrProvince").options[i].value == city){
+                document.getElementById("stateOrProvince").selectedIndex = i;
+            }
+        }
+    }
+}
 
 function city(addressLine){
     if(addressLine.length >= 4){
         document.getElementById('city').value = addressLine[0] + " " + addressLine[1];
-        document.getElementById('stateOrProvince').value = addressLine[2];
+        selectCity(addressLine[2]);
         document.getElementById('postalCode').value = addressLine[3];
     }
     else{
         document.getElementById('city').value = addressLine[0];
-        document.getElementById('stateOrProvince').value = addressLine[1];
+        selectCity(addressLine[1]);
         document.getElementById('postalCode').value = addressLine[2];
     }
 }
