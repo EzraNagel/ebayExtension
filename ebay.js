@@ -56,7 +56,7 @@ function name(nameLine){
     }
     else if (nameLine.length == 3){
         document.getElementById('firstName').value = array1[0];
-        document.getElementById('lastName').value = array1[1] + " " + array2[2];
+        document.getElementById('lastName').value = array1[1] + " " + array1[2];
     }
 
 }
