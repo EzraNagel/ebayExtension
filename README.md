@@ -1,2 +1,3 @@
-# personalCode
-Personal projects for experience and growth in languages and frameworks
+# ebayExtension
+Outdated Manifest 2.0 Google Extension for automatically inserting shipping information into Ebay.
+Download as zip file and select under load unpacked on Google extensions.
